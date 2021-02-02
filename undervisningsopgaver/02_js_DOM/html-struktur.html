@@ -7,7 +7,26 @@
     <title>html struktur</title>
     <link rel="stylesheet" href="">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        #section_wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        p {
+            max-width: 300px;
+        }
+
+        article {
+            border: solid 1px;
+            max-width: 300px;
+            margin: 2rem;
+        }
     </style>
 </head>
 
@@ -17,14 +36,15 @@
     </header>
 
     <main>
+        <h2>Undertitel</h2>
         <section id="section_wrapper">
-            <h2>Undertitel</h2>
-            <article>
+            <article id="article1">
                 <img src="https://placeimg.com/300/400/animals" alt="random dyr">
                 <h3>Artikel</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, expedita quae harum explicabo, dolorem aperiam dicta deleniti ipsum sequi repellat perferendis, veritatis ad quibusdam! Voluptatum soluta similique itaque explicabo cupiditate?</p>
             </article>
-            <article><img src="https://placeimg.com/300/400/animals" alt="random dyr">
+            <article id="article2">
+                <img src="https://placeimg.com/300/400/animals" alt="random dyr">
                 <h3>Artikel</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, expedita quae harum explicabo, dolorem aperiam dicta deleniti ipsum sequi repellat perferendis, veritatis ad quibusdam! Voluptatum soluta similique itaque explicabo cupiditate?</p>
             </article>
