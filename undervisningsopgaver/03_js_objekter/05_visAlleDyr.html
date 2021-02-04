@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <section id="liste"></section>
+
+    <script>
+        // Tjekke om domen er loaded inden vi tilføjer elementer
+        document.addEventListener("DOMContentLoaded", start);
+
+        let dyr = [{
+                "navn": "Frø",
+                "type": "amfibie",
+                "billede": "http://mabe-kea.dk/E19/pics/frog.png",
+                "levested": "søer"
+            },
+            {
+                "navn": "Gris",
+                "type": "pattedyr",
+                "billede": "http://mabe-kea.dk/E19/pics/pig.png",
+                "levested": "svinefarme"
+            },
+            {
+                "navn": "Ræv",
+                "type": "pattedyr",
+                "billede": "http://mabe-kea.dk/E19/pics/fox.png",
+                "levested": "skovområder"
+            },
+            {
+                "navn": "Sild",
+                "type": "fisk",
+                "billede": "http://mabe-kea.dk/E19/pics/sild.jpg",
+                "levested": "havet"
+            },
+            {
+                "navn": "Krokodille",
+                "type": "krybdyr",
+                "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg",
+                "levested": "sumpområder"
+            }
+        ];
+
+        function start() {
+            console.log("Dom er loadet");
+
+            const listevisning = document.querySelector("#liste");
+            // løb dyrelisten igennem og indsæt i #liste
+            dyr.forEach(dyr => {
+                //placer dyr i html
+                listevisning.innerHTML += `<p>${dyr.navn}, ${dyr.type} fra ${dyr.levested}</p>`
+            })
+        }
+    </script>
+</body></html>
