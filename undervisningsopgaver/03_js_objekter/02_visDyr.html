@@ -25,8 +25,15 @@
 
         console.log(`dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested}`)
 
-        const destination = document.querySelector("#article");
-        destination.querySelector("p").textContent = `dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
-        destination.querySelector("img").src = dyr.billede;
+        // Tjekke om domen er loaded inden vi tilføjer elementer
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("visDyr");
+
+            const destination = document.querySelector("#article");
+            destination.querySelector("p").textContent = `dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
+            destination.querySelector("img").src = dyr.billede;
+        }
     </script>
 </body></html>
