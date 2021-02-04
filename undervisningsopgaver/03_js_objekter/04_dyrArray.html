@@ -50,6 +50,13 @@
 
         console.log(dyr);
 
+        // Tjekke om domen er loaded inden vi tilføjer elementer
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("Dom er loadet");
+        }
+
     </script>
 </body>
 
