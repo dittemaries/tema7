@@ -9,6 +9,12 @@
 </head>
 
 <body>
+
+    <article id="article">
+        <p></p>
+        <img src="" alt="">
+    </article>
+
     <script>
         let dyr = {
             "navn": "Gris",
@@ -18,5 +24,9 @@
         }
 
         console.log(`dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested}`)
+
+        const destination = document.querySelector("#article");
+        destination.querySelector("p").textContent = `dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
+        destination.querySelector("img").src = dyr.billede;
     </script>
 </body></html>
