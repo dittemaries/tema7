@@ -48,10 +48,12 @@
     <header>
         <h1>Alle</h1>
         <nav>
-            <button data-menu="alle" class="valgt">Menu</button>
-            <button data-menu="forretter">Forretter</button>
-            <button data-menu="hovedretter" valgt>Hovedretter</button>
-            <button data-menu="desserter">Desserter</button>
+            <button data-kategori="alle" class="valgt">Menu</button>
+            <button data-kategori="forretter">Forretter</button>
+            <button data-kategori="hovedretter" valgt>Hovedretter</button>
+            <button data-kategori="sideorders">Sideorders</button>
+            <button data-kategori="desserter">Desserter</button>
+            <button data-kategori="drikkevarer">Drikkevarer</button>
         </nav>
     </header>
 
@@ -86,7 +88,7 @@
         }
 
         function filtrerRetter() {
-            filter = this.dataset.menu;
+            filter = this.dataset.kategori;
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt")
             visRetter();
@@ -111,7 +113,7 @@
             retter.forEach(ret => {
 
                 // loop igennem json (retter)
-                if (filter == ret.menu || filter == "alle") {
+                if (filter == ret.kategori || filter == "alle") {
                     const klon = skabelon.cloneNode(true);
                     klon.querySelector(".navn").textContent = ret.navn
                     klon.querySelector(".ret-billede").src = medieurl + ret.billede;
