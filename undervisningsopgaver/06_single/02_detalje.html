@@ -5,7 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        article {
+            width: 500px;
+            margin: 0 auto;
+            border: solid 1px grey;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,8 +30,9 @@
         <h2 class="navn"></h2>
         <p class="køn"></p>
         <img src="" alt="" class="profil-billede">
+        <button>Luk</button>
     </article>
-    <button>Luk</button>
+
 
     <script>
         console.log("virker det");
@@ -51,8 +68,5 @@
         function tilbageTilPersonGalleri() {
             history.back();
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
