@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Bistro Babushka</title>
     <style>
         * {
             margin: 0;
@@ -25,10 +25,18 @@
             cursor: pointer;
         }
 
+        #menu-oversigt .ret {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+            background-color: #4A4208;
+        }
+
         #liste {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-gap: 1em;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 2em;
             margin: 2em;
             padding-left: 2rem;
             padding-right: 2rem;
@@ -164,6 +172,12 @@
         footer {
             background-color: black;
             color: white;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        footer p {
+            padding-bottom: 2rem;
         }
     </style>
 
@@ -209,7 +223,7 @@
         </nav>
 
 
-        <h1 class="alleRetter">Alle retter</h1>
+        <h1 class="alleRetter">Babushka Menu</h1>
         <p class="translate">We put Danish translate so you understand.</p>
         <section id="liste"></section>
 
@@ -283,6 +297,7 @@
     </script>
 </body>
 <footer>
-    <h2>Kontakt</h2>
-    <p>Telefon: 12 34 56 78</p>
+    <h2>You pick up food here:</h2>
+    <p>Putinsgade 342, 2400 København Nv</p>
+    <p>You call this: 12 34 56 78</p>
 </footer></html>
