@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/hth3ten.css">
     <title>Bistro Babushka</title>
     <style>
         * {
@@ -15,44 +16,6 @@
             font-family: sans-serif;
         }
 
-        #menu-oversigt img {
-            width: 100%;
-            opacity: 80%;
-        }
-
-        #menu-oversigt img:hover {
-            opacity: 100%;
-            cursor: pointer;
-        }
-
-        #menu-oversigt .ret {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 2rem;
-            background-color: #4A4208;
-        }
-
-        #liste {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 2em;
-            margin: 2em;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        .alleRetter {
-            margin-left: 4rem;
-            margin-top: 4rem;
-        }
-
-        .translate {
-            margin-left: 4rem;
-            margin-bottom: 4rem;
-        }
-
-
         nav {
             display: flex;
             justify-content: center;
@@ -63,6 +26,9 @@
             text-align: center;
             margin: 0.5rem;
             padding: 0.5rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .valgt {
@@ -90,7 +56,13 @@
             transform: translate(-50%, -50%);
             color: white;
             font-size: 2rem;
+
+            font-family: epitaph, sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
+
+        /* første sektion - om */
 
         #om {
             display: grid;
@@ -121,23 +93,37 @@
             margin-left: 5rem;
             margin-top: 7rem;
             font-size: 2.5rem;
+            font-family: epitaph, sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .lorem1 {
             margin-left: 3rem;
             padding: 2rem;
             font-size: 1.5rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .ned {
             font-size: 1.5rem;
             margin-left: 5rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .scroll {
             text-decoration: none;
             color: white;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
         }
+
+        /* midterste sektion - take away info */
 
         #takeAway {
             display: grid;
@@ -151,10 +137,16 @@
 
         .text2 h2 {
             margin-bottom: 1rem;
+            font-family: epitaph, sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .text2 .lorem2 {
             margin-bottom: 2rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .billede2 {
@@ -168,6 +160,73 @@
             margin-left: 11rem;
         }
 
+        /* nederste sektion - menu oversigt */
+
+        #menu-oversigt img {
+            width: 100%;
+            opacity: 100%;
+            padding-top: 1rem;
+        }
+
+        #menu-oversigt img:hover {
+            opacity: 70%;
+            cursor: pointer;
+        }
+
+        #menu-oversigt .ret {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+            background-color: #4A4208;
+        }
+
+        #menu-oversigt h2 {
+            font-family: epitaph, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #liste {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 2em;
+            margin: 2em;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .alleRetter {
+            margin-left: 4rem;
+            margin-top: 4rem;
+            font-family: epitaph, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .translate {
+            margin-left: 4rem;
+            margin-bottom: 4rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .shortText {
+            padding: 1rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .pris {
+            text-align: right;
+            padding: 1rem;
+            font-size: 3rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
+        }
 
         footer {
             background-color: black;
@@ -178,7 +237,60 @@
 
         footer p {
             padding-bottom: 2rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
         }
+
+        @media (max-width: 600px) {
+
+            .hero-text {
+                font-size: 1rem;
+                left: 33%;
+            }
+
+            #om {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .billede1 {
+                max-width: 60%;
+                margin: 0 auto;
+                padding-bottom: 3rem;
+            }
+
+            .text1 {
+                height: 100%;
+                margin-left: -1rem;
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            #takeAway {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .text2 {
+                padding-left: 4rem;
+                padding-right: 3rem;
+                margin-top: 5rem;
+            }
+
+            .billede2 img {
+                margin-left: 0;
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 3rem;
+            }
+
+            nav {
+                flex-direction: column;
+                margin: 3rem;
+            }
+        }
+
     </style>
 
 </head>
@@ -230,8 +342,9 @@
         <template>
             <article class="ret">
                 <h2 class="navn"></h2>
-                <p class="pris"></p>
                 <img src="" alt="" class="ret-billede">
+                <p class="shortText"></p>
+                <p class="pris"></p>
             </article>
         </template>
 
@@ -285,6 +398,8 @@
                     const klon = skabelon.cloneNode(true);
                     klon.querySelector(".navn").textContent = ret.navn
                     klon.querySelector(".ret-billede").src = medieurl + ret.billede;
+                    klon.querySelector(".shortText").textContent = ret.kortbeskrivelse;
+                    klon.querySelector(".pris").textContent = ret.pris + `${",-"}`;
                     klon.querySelector(".ret").addEventListener("click", () => visDetaljer(ret));
                     dest.appendChild(klon);
                 }
@@ -294,10 +409,13 @@
         function visDetaljer(hvilken) {
             location.href = `retVisning.html?id=${hvilken._id}`;
         }
+
     </script>
 </body>
 <footer>
     <h2>You pick up food here:</h2>
     <p>Putinsgade 342, 2400 København Nv</p>
     <p>You call this: 12 34 56 78</p>
-</footer></html>
+</footer>
+
+</html>

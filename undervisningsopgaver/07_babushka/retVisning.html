@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/hth3ten.css">
     <title>You choose..</title>
     <style>
         * {
@@ -24,6 +25,9 @@
         .ret h2 {
             padding: 2rem;
             margin-top: 3rem;
+            font-family: epitaph, sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .ret button {
@@ -32,7 +36,57 @@
             padding: 0.5rem;
             padding-left: 2rem;
             padding-right: 2rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
         }
+
+        .longText {
+            padding: 1rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .pris {
+            text-align: right;
+            font-size: 3rem;
+            font-family: dico-typewriter, mono;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @media (max-width: 600px) {
+            .ret {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            img {
+                width: 80%;
+                padding: 2rem;
+            }
+
+            .ret h2 {
+                padding: 1rem;
+                margin-left: 1rem;
+            }
+
+            .longText {
+                padding: 2rem;
+            }
+
+            .pris {
+                padding: 3rem;
+                font-size: 2rem;
+            }
+
+            .ret button {
+                margin-left: 9rem;
+                margin-top: -1rem;
+            }
+        }
+
     </style>
 </head>
 
@@ -40,9 +94,10 @@
 
     <article class="ret">
         <h2 class="navn"></h2>
-        <p class="pris"></p>
         <img src="" alt="" class="ret-billede">
-        <button>Luk</button>
+        <p class="longText"></p>
+        <p class="pris"></p>
+        <button>Back to menu</button>
     </article>
 
 
@@ -74,11 +129,16 @@
         function visRetter() {
             document.querySelector(".navn").textContent = ret.navn;
             document.querySelector(".ret-billede").src = medieurl + ret.billede;
+            document.querySelector(".longText").textContent = ret.langbeskrivelse;
+            document.querySelector(".pris").textContent = ret.pris + `${",-"}`;
             document.querySelector("button").addEventListener("click", tilbageTilMenu);
         }
 
         function tilbageTilMenu() {
             history.back();
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
